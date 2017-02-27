@@ -72,4 +72,13 @@ class RipplesController < ApplicationController
     def ripple_params
       params.require(:ripple).permit(:name, :url, :message)
     end
+    
+    def next10
+      
+    end
+    
+    def previous10
+      
+    end
+    
 end
