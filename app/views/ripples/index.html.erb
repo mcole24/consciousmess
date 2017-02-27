@@ -6,8 +6,8 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Url</th>
       <th>Message</th>
+      <th>Posted</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,12 +15,11 @@
   <tbody>
     <% @ripples.each do |ripple| %>
       <tr>
-        <td><%= ripple.name %></td>
+        <td><%= link_to_unless ripple.url == "", ripple.name, ripple.url %></td>
         <td><%= ripple.url %></td>
         <td><%= ripple.message %></td>
+        <td><%= ripple.created_at %></td>
         <td><%= link_to 'Show', ripple %></td>
-        <td><%= link_to 'Edit', edit_ripple_path(ripple) %></td>
-        <td><%= link_to 'Destroy', ripple, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +27,8 @@
 
 <br>
 
+<%= link_to 'Newest', '/ripples' %>
+<%= link_to 'Previous 10 Ripples', '/ripples' %>
+<%= link_to 'Next 10 Ripples', '/ripples' %>
+<%= link_to 'Oldest', '/ripples' %>
 <%= link_to 'New Ripple', new_ripple_path %>
