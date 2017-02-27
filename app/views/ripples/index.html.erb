@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Ripples</h1>
-
 <table>
   <thead>
     <tr>
@@ -26,8 +24,8 @@
 
 <br>
 
-<%= link_to 'Newest', '/ripples' %>
-<%= link_to 'Previous 10 Ripples', '/ripples' %>
-<%= link_to 'Next 10 Ripples', '/ripples' %>
-<%= link_to 'Oldest', '/ripples' %>
+<%= link_to 'Newest', '/ripples/newest' %>
+<%= link_to 'Previous 10 Ripples', '/ripples/previous10' %>
+<%= link_to 'Next 10 Ripples', '/ripples#next10' %>
+<%= link_to 'Oldest', '/ripples#oldest' %>
 <%= link_to 'New Ripple', new_ripple_path %>
