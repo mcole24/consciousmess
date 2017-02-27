@@ -5,6 +5,7 @@ class RipplesController < ApplicationController
   # GET /ripples.json
   def index
     @ripples = Ripple.all
+    @ripples.reverse_order  #This is so most recent messages can be displayed first.
   end
 
   # GET /ripples/1
