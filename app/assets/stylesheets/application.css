@@ -17,4 +17,9 @@
     background: #2EFE64;
     padding: 2em;
     border-radius: 25px;
+    width: 80%;
+}
+
+table {
+    width: 80%;
 }
