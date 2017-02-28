@@ -24,11 +24,11 @@ Ripple.create(
         message: 'I apparently know nothing'
     )
     
-Ripple.create(
-    name: 'Abigail',
-    
-    message: 'Mauris non dui nec' 
-    )
+    Ripple.create(
+        name: 'Abigail',
+        
+        message: 'Mauris non dui nec' 
+        )
     
     Ripple.create(
     name: 'Grady',
@@ -92,8 +92,53 @@ Ripple.create(
     
     Ripple.create(
     name: 'Alexandra',
-    
+    url: 'google.com',
     message: 'ac, eleifend vitae, erat. Vivamus nisi. Mauris nulla.' 
+    )
+    
+    
+    
+    Ripple.create(
+    name: 'George Michael',
+    
+    message: 'thethethertgerq' 
+    )
+    
+    Ripple.create(
+    name: 'Prince',
+    url: 'google.com',
+    message: 'g43g3g34g34g34' 
+    )
+    
+    
+    Ripple.create(
+    name: 'David Bowie',
+    
+    message: 'rhh45jjk756k765k7k5' 
+    )
+    
+    Ripple.create(
+    name: 'Trump',
+    url: 'google.com',
+    message: 'SAD!' 
+    )
+    
+    Ripple.create(
+    name: 'random person',
+    
+    message: '!!!!!!!!!!' 
+    )
+    
+    
+    Ripple.create(
+    name: 'my dog',
+    url: 'google.com',
+    message: 'bark' 
+    )
+    
+    Ripple.create(
+    name: 'my other dog',
+    message: 'bigger bark' 
     )
     
    

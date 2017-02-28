@@ -7,7 +7,7 @@ class RipplesController < ApplicationController
     
     session[:page] ||= 0
     first_displayed_entry = session[:page] * 10
-    last_displayed_entry = session[:page] + 9
+    last_displayed_entry = first_displayed_entry + 9
     @ripples = Ripple.order(created_at: :desc)
     @ripples = @ripples[first_displayed_entry..last_displayed_entry]
     
@@ -104,8 +104,8 @@ class RipplesController < ApplicationController
     
     
     def oldest
-      total_pages = getPageCount
-      session[:pages] = total_pages - 1
+      
+      session[:page] = Ripple.all.count / 10
       Ripple.order(created_at: :asc)
       respond_to do |format|
         format.html {redirect_to ripples_url}
