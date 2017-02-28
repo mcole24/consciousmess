@@ -1,6 +1,9 @@
 require 'test_helper'
 
 class RipplesControllerTest < ActionDispatch::IntegrationTest
+  
+  fixtures :ripples
+  
   setup do
     @ripple = ripples(:one)
   end
@@ -8,6 +11,7 @@ class RipplesControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get ripples_url
     assert_response :success
+    assert_not_nil assigns(:ripples)
   end
 
   test "should get new" do
@@ -27,22 +31,8 @@ class RipplesControllerTest < ActionDispatch::IntegrationTest
     get ripple_url(@ripple)
     assert_response :success
   end
+  
+  
 
-  test "should get edit" do
-    get edit_ripple_url(@ripple)
-    assert_response :success
-  end
-
-  test "should update ripple" do
-    patch ripple_url(@ripple), params: { ripple: { message: @ripple.message, name: @ripple.name, url: @ripple.url } }
-    assert_redirected_to ripple_url(@ripple)
-  end
-
-  test "should destroy ripple" do
-    assert_difference('Ripple.count', -1) do
-      delete ripple_url(@ripple)
-    end
-
-    assert_redirected_to ripples_url
-  end
+  
 end

@@ -12,8 +12,12 @@
 
   <tbody>
     <% @ripples.each do |ripple| %>
-      <tr>
-        <td><%= link_to_unless ripple.url == "", ripple.name, ripple.url %></td>
+      <tr class="<%= cycle('odd_row', 'even_row') %>">
+        <% if ripple.url.blank?  %>
+          <td><%= ripple.name %></td>
+        <% else %>
+          <td><a href=<%= ripple.url %>><%= ripple.name %></a></td>
+        <% end %>
         <td><%= ripple.message %></td>
         <td><%= ripple.created_at %></td>
         <td><%= link_to 'Show', ripple %></td>

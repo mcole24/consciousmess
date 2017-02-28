@@ -23,10 +23,7 @@ class RipplesController < ApplicationController
     @ripple = Ripple.new
   end
 
-  # GET /ripples/1/edit
-  def edit
-  end
-
+  
   # POST /ripples
   # POST /ripples.json
   def create
@@ -43,29 +40,7 @@ class RipplesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /ripples/1
-  # PATCH/PUT /ripples/1.json
-  def update
-    respond_to do |format|
-      if @ripple.update(ripple_params)
-        format.html { redirect_to @ripple, notice: 'Ripple was successfully updated.' }
-        format.json { render :show, status: :ok, location: @ripple }
-      else
-        format.html { render :edit }
-        format.json { render json: @ripple.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /ripples/1
-  # DELETE /ripples/1.json
-  def destroy
-    @ripple.destroy
-    respond_to do |format|
-      format.html { redirect_to ripples_url, notice: 'Ripple was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  
   
   def next10
       total_pages = getPageCount
