@@ -26,6 +26,6 @@
 
 <%= link_to 'Newest', '/ripples/newest' %>
 <%= link_to 'Previous 10 Ripples', '/ripples/previous10' %>
-<%= link_to 'Next 10 Ripples', '/ripples#next10' %>
-<%= link_to 'Oldest', '/ripples#oldest' %>
+<%= link_to 'Next 10 Ripples', :controller => :ripples, :action => :next10 %>
+<%= link_to 'Oldest', '/ripples/oldest' %>
 <%= link_to 'New Ripple', new_ripple_path %>

@@ -1,5 +1,5 @@
 class RipplesController < ApplicationController
-  before_action :set_ripple, only: [:show, :edit, :update, :destroy]
+  before_action :set_ripple, only: [:show]
 
   # GET /ripples
   # GET /ripples.json
