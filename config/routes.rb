@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   get 'ripples/next10' => 'ripples#next10', :as => :next10
   get 'ripples/previous10' => 'ripples#previous10', :as => :previous10
   
-  resources :ripples
+  resources :ripples, except: [:edit, :destroy]
   
 end
