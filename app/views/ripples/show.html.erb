@@ -1,18 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @ripple.name %>
+  <% if @ripple.url.empty? %>
+    <strong>Name:</strong>
+    <%= @ripple.name %>
+  <% else %>
+    <strong>Name:</strong>
+    <a href="<%= @ripple.url %>"><%= @ripple.name %></a>
+  <% end %>
 </p>
+
 
 <p>
-  <strong>Url:</strong>
-  <%= @ripple.url %>
-</p>
-
-<p id="displayedmessage">
-  <strong>Message:</strong>
-  <%= @ripple.message %>
+  <strong>Message:</strong><br><br>
+  <span id="displayedmessage"><%= @ripple.message %></span>
 </p>
 
 <%= link_to 'Back', ripples_path %>
