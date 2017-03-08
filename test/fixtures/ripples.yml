@@ -1,6 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-<% for i.upto(35) do |i| %>
+<% for i in 1..35 %>
 fix_<%= i %>:
   name: person_<%=  i  %>
   url: website_<%=  i  %>

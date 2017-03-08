@@ -1,15 +1,16 @@
 require 'test_helper'
 
-class RipplesControllerTest < ActionDispatch::IntegrationTest
+class RipplesControllerTest < ActionController::TestCase
   
   fixtures :ripples
+  self.use_transactional_tests = true
   
   setup do
     @ripple = ripples(:one)
   end
 
   test "should get index" do
-    get ripples_url
+    get :index
     assert_response :success
     assert_not_nil assigns(:ripples)
   end
