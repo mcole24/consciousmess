@@ -86,6 +86,7 @@ class RipplesController < ApplicationController
         format.html {redirect_to ripples_url}
         format.json {head :no_content}
       end
+      
     end
     
 end
